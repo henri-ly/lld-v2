@@ -2,7 +2,7 @@ name: nightly build
 on:
   push:
     tags:
-      - "*nightly"
+      - "*nightly*"
 
 jobs:
   nightly-macos:

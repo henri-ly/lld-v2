@@ -81,6 +81,8 @@ export const Address: ThemedComponent<{}> = styled(Text)`
   flex-wrap: wrap;
   padding: 4px;
   width: fit-content;
+  max-width: 400px;
+  word-break: break-all;
 `;
 
 export const GradientHover: ThemedComponent<{}> = styled(Box).attrs(() => ({
@@ -112,6 +114,7 @@ const OpDetailsData: ThemedComponent<{ color?: string }> = styled(Box).attrs(p =
 
   &:hover ${GradientHover} {
     display: flex;
+    justify-content: center;
     & > * {
       cursor: pointer;
     }

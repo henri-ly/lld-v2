@@ -26,7 +26,7 @@ const Root = (props: *) => (
     </Box>
     <Box>
       <Text ff="Inter|Regular" color="palette.text.shade80" fontSize={4}>
-        <Trans i18nKey="send.steps.warning.stellar.memo" />
+        <Trans i18nKey="send.steps.warning.stellar.text" />
       </Text>
     </Box>
   </Box>

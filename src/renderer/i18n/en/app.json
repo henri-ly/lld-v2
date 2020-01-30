@@ -651,6 +651,9 @@
       "warning": {
         "tezos": {
           "text": "The amount to be sent will be deducted from the balance of your delegated account."
+        },
+        "stellar": {
+          "text": "When using a Memo, carefully verify the type used with the recipient"
         }
       }
     },

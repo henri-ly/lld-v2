@@ -551,7 +551,8 @@
         "rippleTagPlaceholder": "Facultatif",
         "ethereumGasLimit": "Gas limit",
         "ethereumGasPrice": "Gas Price",
-        "unitPerByte": "{{unit}} par octet"
+        "unitPerByte": "{{unit}} par octet",
+        "stellarMemo": "Memo"
       },
       "verification": {
         "title": "Vérification"
@@ -571,6 +572,9 @@
       "warning": {
         "tezos": {
           "text": "The amount to be sent will be deducted from the balance of your delegated account."
+        },
+        "stellar": {
+          "text": "When using a Memo, carefully verify the type used with the recipient"
         }
       }
     },

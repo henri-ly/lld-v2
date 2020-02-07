@@ -18,8 +18,11 @@ const MemoValueField = ({ onChange, account, transaction, status }: Props) => {
     [onChange, transaction, bridge, account],
   );
 
-  const { memo: memoError } = status.errors;
-  const { memo: memoWarning } = status.warnings;
+  // We use transaction as an error here.
+  // It will be usefull to block a memo wrong format
+  // on the ledger-live mobile
+  const { transaction: memoError } = status.errors;
+  const { transaction: memoWarning } = status.warnings;
 
   return (
     <Input

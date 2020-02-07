@@ -9,14 +9,17 @@ import Text from "~/renderer/components/Text";
 
 const Root = (props: *) => (
   <Box flow={1}>
-    <Box>
+    <Box mb={10}>
       <Label>
         <span>
           <Trans i18nKey="send.steps.details.stellarMemo" />
         </span>
       </Label>
+      <Text ff="Inter|Regular" color="palette.text.shade50" fontSize={4}>
+        <Trans i18nKey="send.steps.warning.stellar.text" />
+      </Text>
     </Box>
-    <Box horizontal grow alignItems="center" justifyContent="space-between">
+    <Box mb={30} horizontal grow alignItems="center" justifyContent="space-between">
       <MemoTypeField {...props} />
       {props.transaction.memoType && props.transaction.memoType !== "NO_MEMO" && (
         <Box ml={20} grow={1}>
@@ -24,15 +27,12 @@ const Root = (props: *) => (
         </Box>
       )}
     </Box>
-    <Box>
-      <Text ff="Inter|Regular" color="palette.text.shade80" fontSize={4}>
-        <Trans i18nKey="send.steps.warning.stellar.text" />
-      </Text>
-    </Box>
   </Box>
 );
 
 export default {
   component: withTranslation()(Root),
-  fields: ["memoType", "memoValue"],
+  // Transaction is used here to prevent user to forward
+  // If he format a memo incorrectly
+  fields: ["memoType", "transaction"],
 };
